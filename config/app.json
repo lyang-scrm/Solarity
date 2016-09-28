@@ -1,0 +1,44 @@
+{
+    "defaults": {
+        "jsConfig": {
+            "appName": "AcmeCRM",
+            "productName": "AcmeCRMCRM",
+            "brandName": "AcmeCRMCRM",
+            "appBuild": "1",
+            "appVersion": "1.0.0",
+            "sdkVersion": "4.1.0.365 alpha17",
+            "about": {
+                "privacy": "http://acmecrm.com/mobile_privacy",
+                "tos": "http://acmecrm.com/mobile_tos",
+                "support": "support.acmecrm.com",
+                "supportEmail": "support@acmecrm.com",
+                "copyrightText": "Copyright © 2004-2016 AcmeCRMCRM Inc. All Rights Reserved.",
+                "trademarkText": "AcmeCRM and AcmeCRMCRM are trademarks owned by AcmeCRMCRM Inc. All other trademarks are the property of their respective owners."
+            },
+            "ui": {
+                "icons": {
+                    "actions": {
+                        "skype": "icon icon-skype",
+                        "magic": "icon icon-magic"
+                    }
+                }
+            }
+        },
+        "native": {
+            "ios": {
+                "binaryName": "AcmeCRMCRM",
+                "bundleId": "com.acmecrm.crm"
+            },
+            "android": {
+                "signingKey": {
+                    "keystore": "",
+                    "alias": ""
+                },
+                "binaryName": "AcmeCRMCRM",
+                "packageName": "com.acmecrm.crm"
+            },
+            "statusBarBackgroundColor": "#bf2020",
+            "splashscreenBackgroundColor": "#7f8384"
+        }
+    }
+}
