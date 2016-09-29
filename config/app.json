@@ -7,6 +7,8 @@
             "appBuild": "1",
             "appVersion": "1.0.0",
             "sdkVersion": "4.1.0.365 alpha17",
+            "defaultServerUrl": "http://ezheng772ent.sugardev.io",
+
             "about": {
                 "privacy": "http://acmecrm.com/mobile_privacy",
                 "tos": "http://acmecrm.com/mobile_tos",
@@ -16,13 +18,11 @@
                 "trademarkText": "AcmeCRM and AcmeCRMCRM are trademarks owned by AcmeCRMCRM Inc. All other trademarks are the property of their respective owners."
             },
             "ui": {
-                "icons": {
-                    "actions": {
-                        "skype": "icon icon-skype",
-                        "magic": "icon icon-magic"
-                    }
-                }
-            }
+                "numberOfAdditionalListFields": 3,
+                "displayListFieldLabel": false,
+                "skipTutorial": true
+            },
+            "offline": {"enabled": false}
         },
         "native": {
             "ios": {
@@ -31,8 +31,9 @@
             },
             "android": {
                 "signingKey": {
-                    "keystore": "",
-                    "alias": ""
+                    "keystore": "./acme_debug.keystore",
+                    "storepass": "123456",
+                    "alias": "acmecrm_key"
                 },
                 "binaryName": "AcmeCRMCRM",
                 "packageName": "com.acmecrm.crm"

@@ -1,13 +1,6 @@
 {
   "jsConfig": {
-    "siteUrl": "http://ezheng772ent.sugardev.io",
+    "siteUrl": "http://ezheng772ent.sugardev.io"
 
-    "ui": {
-      "numberOfAdditionalListFields": 3,
-      "displayListFieldLabel": false,
-      "skipTutorial": true
-    },
-
-    "offline": {"enabled": false}
   }
 }
