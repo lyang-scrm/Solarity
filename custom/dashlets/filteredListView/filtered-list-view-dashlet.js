@@ -68,7 +68,7 @@ customization.declareLayout({
         var cfg = this._super();
 
         cfg.save = true;
-        cfg.saveLabel = 'Button';
+        cfg.saveLabel = 'Route';
 
         return cfg;
     },
