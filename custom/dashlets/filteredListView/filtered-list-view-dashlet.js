@@ -87,7 +87,8 @@ customization.declareLayout({
         var cards = dashboard.getViews()[0];
         var list = cards.getViews()[0];
         var models = list.collection.models;
-        var url = "https://www.google.com/maps/dir";
+        var currentAddress = "10051 North Wolfe, Cupertino, CA 95014";
+        var url = "https://www.google.com/maps/dir/" + currentAddress;
 
         for(var i=0; i<models.length; i++) {
             var newAddress = models[i].get('location');
