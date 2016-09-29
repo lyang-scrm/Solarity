@@ -101,12 +101,12 @@ var customActions = [
         rank: 0,
     },
 
-    // Let's create global action by omitting module property
     {
-        name: 'record-to-clipboard',
+        name: 'route',
         types: ['context-menu', 'toolbar'],
-        label: 'Copy to clipboard',
-        iconKey: 'menu.duplicate',
+        modules: ['Meetings'],
+        label: 'Route',
+        iconKey: 'actions.map',
         stateHandlers: {
             isVisible: function isVisible(view, model) {
                 // Check if action is available here
@@ -115,12 +115,15 @@ var customActions = [
             },
         },
 
-        handler: function(view, model) {
-            // Place action code here
-            dialog.showAlert('Record name copied to clipboard...');
+        handler: function (view, model) {
+            var address = model.get('location');
+            var currentAddress = "10051 North Wolfe, Cupertino, CA 95014";
+            var url = "https://www.google.com/maps/dir/" + currentAddress + "/" + address;
+            deviceFeatures.openWebPage(url);
         },
 
         rank: 0,
+
     },
 
     // Check in with geolocation data.

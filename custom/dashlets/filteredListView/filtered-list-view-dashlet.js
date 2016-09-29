@@ -14,7 +14,7 @@ var customization = require('%app.core%/customization');
 var ListContainerDashletView = require('%app.dashlets%/list-container-dashlet-view');
 
 var dashlet = customization.declareDashlet({
-    title: 'Filtered ListView',
+    title: 'Today\'s appointments',
     parent: ListContainerDashletView,
     iconKey: 'dashlets.dashablelist',
 },
@@ -24,8 +24,8 @@ var dashlet = customization.declareDashlet({
 
         options.listParams = {  // listParam property holds configuration of child list view including filter.
             filter: {
-                date_modified: {
-                    $dateRange: 'last_7_days',
+                date_start: {
+                    $dateRange: 'tomorrow'
                 },
             },
         };

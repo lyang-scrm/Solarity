@@ -10,16 +10,6 @@
             [
               {
                 "view": {
-                  "type": "external-source-list",
-                  "label": "External data source",
-                  "display_columns": [],
-                  "limit": 15
-                }
-              }
-            ],
-            [
-              {
-                "view": {
                   "label": "Today's appointments",
                   "type": "filtered-dashable-list",
                   "module": "Meetings",
@@ -33,6 +23,16 @@
                 },
                 "context": {
                   "module": "Meetings"
+                }
+              }
+            ],
+            [
+              {
+                "view": {
+                  "type": "external-source-list",
+                  "label": "External data source",
+                  "display_columns": [],
+                  "limit": 15
                 }
               }
             ],
