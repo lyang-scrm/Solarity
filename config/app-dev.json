@@ -2,8 +2,11 @@
   "jsConfig": {
     "siteUrl": "http://ezheng772ent.sugardev.io",
 
-    // Do not display welcome guide
-    "ui": { "skipTutorial": true },
+    "ui": {
+      "numberOfAdditionalListFields": 3,
+      "displayListFieldLabel": false,
+      "skipTutorial": true
+    },
 
     "offline": {"enabled": false}
   }

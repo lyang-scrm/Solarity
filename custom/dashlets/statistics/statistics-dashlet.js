@@ -14,7 +14,7 @@ var customization = require('%app.core%/customization');
 
 //In this example we want to render our own 'statistics' dashlet instead of default 'rssfeed' dashlet
 var dashlet = customization.declareDashlet({
-    title: 'My Statistics',
+    title: 'My Monthly Sales',
     iconKey: 'dashlets.tabbed-dashlet.planned-activities',
 }, {
     template: 'statistics-dashlet',

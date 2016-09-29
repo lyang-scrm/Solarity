@@ -30,7 +30,7 @@
               {
                 "view": {
                   "type": "external-source-list",
-                  "label": "External data source",
+                  "label": "Followup Calls",
                   "display_columns": [],
                   "limit": 15
                 }
@@ -40,7 +40,17 @@
               {
                 "view": {
                   "type": "statistics",
-                  "label": "My statistics",
+                  "label": "My Monthly Sales",
+                  "display_columns": [],
+                  "limit": 15
+                }
+              }
+            ],
+            [
+              {
+                "view": {
+                  "type": "external-source-list",
+                  "label": "Pending Installations",
                   "display_columns": [],
                   "limit": 15
                 }

@@ -27,14 +27,22 @@ var dashlet = customization.declareDashlet({
         options.listParams = {  // listParam property holds configuration of child list view including filter.
             filter: {
                 date_start: {
-                    $dateRange: 'tomorrow'
+                    $dateRange: 'today'
                 },
-            },
+            }
         };
 
         // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
 
         this._super(views, options);
+    },
+
+    loadViewsData: function(loadParams) {
+        this.getViews()[0].collection.orderBy = {
+            field: 'date_start',
+            direction: 'ASC'
+        };
+        this._super(loadParams);
     },
 });
 
