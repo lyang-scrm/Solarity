@@ -1,7 +1,7 @@
 [
   {
     "id": "6b19026e-518b-a2eb-9df3-56eaa898866f-sample-1",
-    "name": "Sample Home Dashboard",
+    "name": "My Candace",
     "dashboard_module": "Home",
     "metadata": {
       "components": [
@@ -20,23 +20,19 @@
             [
               {
                 "view": {
-                  "label": "Filtered ListView",
+                  "label": "Today's appointments",
                   "type": "filtered-dashable-list",
-                  "module": "Accounts",
+                  "module": "Meetings",
                   "display_columns": [
                     "name",
-                    "billing_address_city",
-                    "billing_address_country",
-                    "phone_office",
-                    "assigned_user_name",
-                    "email",
-                    "date_modified",
-                    "date_entered"
+                    "date_start",
+                    "description",
+                    "location"
                   ],
                   "limit": 15
                 },
                 "context": {
-                  "module": "Accounts"
+                  "module": "Meetings"
                 }
               }
             ],
