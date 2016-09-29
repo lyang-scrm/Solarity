@@ -95,6 +95,8 @@ customization.declareLayout({
             var newAddress = models[i].get('location');
             url = url + "/" + newAddress;
         }
+
+        url = url + '/data=!4m4!4m3!2m2!2b1!1b1';
         deviceFeatures.openWebPage(url);
     }
 
