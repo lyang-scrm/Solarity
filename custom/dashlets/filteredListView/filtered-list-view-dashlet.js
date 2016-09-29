@@ -29,6 +29,7 @@ var dashlet = customization.declareDashlet({
                 date_start: {
                     $dateRange: 'today'
                 },
+                status: 'planned',
             }
         };
 
