@@ -13,6 +13,8 @@ var app = SUGAR.App;
 var customization = require('%app.core%/customization');
 var ListContainerDashletView = require('%app.dashlets%/list-container-dashlet-view');
 
+var deviceFeatures = require('%app.core%/device');
+
 var dashlet = customization.declareDashlet({
     title: 'Today\'s appointments',
     parent: ListContainerDashletView,
@@ -37,3 +39,54 @@ var dashlet = customization.declareDashlet({
 });
 
 customization.registerComponent(dashlet, { type: 'filtered-dashable-list' });
+
+var DashboardLayout = require('%app.layouts%/dashboard-layout');
+
+customization.declareLayout({
+    parent: DashboardLayout,
+    header: {
+        buttons: {
+            save: true
+        }
+    },
+    register: {}
+}, {
+    initialize: function(options) {
+
+        this._super(options);
+    },
+
+    getHeaderConfig: function() {
+        var cfg = this._super();
+
+        cfg.save = true;
+        cfg.saveLabel = 'Button';
+
+        return cfg;
+    },
+
+    handleComponentAction: function(actionInitiator, action) {
+        if (action.name === 'header:save:click') {
+            this._doSmth();
+        } else {
+            this._super(actionInitiator, action);
+        }
+    },
+
+    _doSmth: function() {
+
+        var dashboard = this.getComponent('dashboard');
+        var cards = dashboard.getViews()[0];
+        var list = cards.getViews()[0];
+        var models = list.collection.models;
+        var url = "https://www.google.com/maps/dir";
+
+        for(var i=0; i<models.length; i++) {
+            var newAddress = models[i].get('location');
+            url = url + "/" + newAddress;
+        }
+        deviceFeatures.openWebPage(url);
+    }
+
+}
+);
