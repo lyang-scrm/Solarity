@@ -18,7 +18,7 @@ var deviceFeatures = require('%app.core%/device');
 var dashlet = customization.declareDashlet({
     title: 'Today\'s appointments',
     parent: ListContainerDashletView,
-    iconKey: 'dashlets.dashablelist',
+        iconKey: 'dashlets.tabbed-dashlet.planned-activities',
 },
 {
     initViews: function(views, options) {    // overriding initViews method to add own filter to options object.
